@@ -62,16 +62,19 @@ for(let i=1;i<=300;i++)
     let msg= "ciclo "+ i;
     if(np<=39)
     {
-        let nuevo=new Trabajo(Math.random()*11+4)
+        let nuevo=new Trabajo(Math.floor(Math.random()*11+4));
         cola.agregar(nuevo);
         msg+= " se creo proceso "+ nuevo.ciclos;
     }
     if(cola.ver()!=null)
     {
         cola.ver().ciclos--;
+        msg+=" atendiendo "+ cola.ver().ciclos;
         if(cola.ver().ciclos==0)
         {
-            cola.extraer()
+            cola.extraer();
+            msg += " salio un proceso"
         }
     }
+    console.log(msg);
 }
