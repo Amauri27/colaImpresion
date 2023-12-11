@@ -1,0 +1,1 @@
+Este código en JavaScript simula un sistema de trabajo utilizando el principio FIFO (First-In-First-Out), donde los ciclos de trabajo se crean con una cierta probabilidad, se agregan a una cola y se atienden en orden de llegada
